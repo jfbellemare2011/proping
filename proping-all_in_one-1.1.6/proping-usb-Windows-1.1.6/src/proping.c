@@ -1,6 +1,9 @@
 
 /************BEGIN OF PROPING***********************************************************************************/
 
+//qt4/gcc proping.c -o proping -L /lib -l ws2_32
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

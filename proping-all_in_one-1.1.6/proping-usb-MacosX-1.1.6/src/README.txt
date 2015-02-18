@@ -1,8 +1,16 @@
-#==================EXEMPLE OF CONFIGURATION, Let's see in the configuration file /etc/proping/proping.conf=============================
-#
+#==================EXEMPLE OF CONFIGURATION, Let's see in the configuration file /etc/proping/proping.conf===============
+#			   ██▓███   ██▀███   ▒█████   ██▓███   ██▓ ███▄    █   ▄████ 
+#			  ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒▓██░  ██▒▓██▒ ██ ▀█   █  ██▒ ▀█▒
+#			  ▓██░ ██▓▒▓██ ░▄█ ▒▒██░  ██▒▓██░ ██▓▒▒██▒▓██  ▀█ ██▒▒██░▄▄▄░
+#			  ▒██▄█▓▒ ▒▒██▀▀█▄  ▒██   ██░▒██▄█▓▒ ▒░██░▓██▒  ▐▌██▒░▓█  ██▓
+#			  ▒██▒ ░  ░░██▓ ▒██▒░ ████▓▒░▒██▒ ░  ░░██░▒██░   ▓██░░▒▓███▀▒
+#			  ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒▓▒░ ░  ░░▓  ░ ▒░   ▒ ▒  ░▒   ▒ 
+#			  ░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ ░▒ ░      ▒ ░░ ░░   ░ ▒░  ░   ░ 
+#			  ░░         ░░   ░ ░ ░ ░ ▒  ░░        ▒ ░   ░   ░ ░ ░ ░   ░ 
+#			              ░         ░ ░            ░           ░       ░ 
 #	
 #
-#	-If one of the configured interfaces is unreachable, a warning message will be issued on your terminal and by the beeper.
+# -If one of the configured interfaces is unreachable, a warning message will be issued on your terminal and by the beeper.
 #
 #	-To start the service (sudo ./proping |start|stop|)
 #

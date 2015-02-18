@@ -1,29 +1,19 @@
-#==================EXEMPLE OF CONFIGURATION, Let's see in the configuration file ./proping.conf=============================
-#			   ██▓███   ██▀███   ▒█████   ██▓███   ██▓ ███▄    █   ▄████ 
-#			  ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒▓██░  ██▒▓██▒ ██ ▀█   █  ██▒ ▀█▒
-#			  ▓██░ ██▓▒▓██ ░▄█ ▒▒██░  ██▒▓██░ ██▓▒▒██▒▓██  ▀█ ██▒▒██░▄▄▄░
-#			  ▒██▄█▓▒ ▒▒██▀▀█▄  ▒██   ██░▒██▄█▓▒ ▒░██░▓██▒  ▐▌██▒░▓█  ██▓
-#			  ▒██▒ ░  ░░██▓ ▒██▒░ ████▓▒░▒██▒ ░  ░░██░▒██░   ▓██░░▒▓███▀▒
-#			  ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒▓▒░ ░  ░░▓  ░ ▒░   ▒ ▒  ░▒   ▒ 
-#			  ░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ ░▒ ░      ▒ ░░ ░░   ░ ▒░  ░   ░ 
-#			  ░░         ░░   ░ ░ ░ ░ ▒  ░░        ▒ ░   ░   ░ ░ ░ ░   ░ 
-#			              ░         ░ ░            ░           ░       ░ 
+#==================EXEMPLE OF CONFIGURATION, Let's see in the configuration file /etc/proping/proping.conf=============================
+#	
 #	1-Let's you use the file (./configure.bash), before running the service, do not forget to make an executive with
 #	(chmod 755).
+#	
+#	2-Must use the file (./install) before running the service, do not forget to make an executive with (chmod 755).
 #
-#	-Pass in SuperUser mode and copy the directory proping to a place that allows the execution of the script.
-#	 For example within the memory of the device ex; /mnt/usb/proping-usb-linux*/
+#	3-If one of the configured interfaces is unreachable, a warning message will be issued on your terminal and by the beeper.
 #
-#	-( PROPING-USB-LINUX ) can be executed with a live-cd-linux.
+#	4-To start the service (/usr/sbin/proping |start|stop|)
+#	or
+#	-service proping (|stop|start|restart|)
 #
-#	-Must use the file (./proping) before running the service, do not forget to make an executive with (chmod 755).
+#	5-Log files will be created in (/var/log/proping/LOG_FILES.log)
 #
-#	-If one of the configured interfaces is unreachable, a warning message will be issued on your terminal.
-#
-#	-To start the service (./proping |start|stop=(ctrl-c)| or close the window)
-#
-#	-Log files will be created in (./log/LOG_FILES.log)
-#
+#	6-You can stop the beeper through the system.
 #									
 #									__________________________________________________________
 #*1)pc_admin_PINGER		=	192.168.2.2			||							||
@@ -48,18 +38,18 @@
 #						||    ||			 	
 #						|_----_|			
 # SSh or Telnet server			      [5]_\__/_ [7]     
-# and Android_PINGER   		    -----------	 	   \
+# and PC_admin_PINGER		    -----------	 	   \
 # ______	      Cisco	   /			    \			Proxy
-#| ---- |	      Switch   [3]/			     \		      Firewall			--[12]--[etc.]
+#| ---- |	      Switch   [3]/			     \		      Firewall				    -------[12]--[etc.]
 #||    ||		 ---------			      \ 	     -----------	VPN    ___	   /
 #|_----_|		|  _____\ |			       \	    |___|____|__|	Wan  _/	  \_	  /
 # _\__/_ [1]---------[2]| /____ / |	   			\	    |_|_____|___|	   _/	    \____/
 #	\		| \	  |				 \______[9]_|____|_____||[11]_____/		 \___
-#	|adb		 --------- 		Server Ftp	 	    |_|_____|___|	  \_   Internet     _/
+#	|		 --------- 		Server Ftp	 	    |_|_____|___|	  \_   Internet     _/
 #	|Telnet		       [4]\		Server_Web	________[10]|____|_____||	    \_	     ______/
 #	|SSH 			   \  	  	 ______	       /	    |  |     |	|	      \_____/
 #	|			    \          	| ---- |      /		     -----------	/		/
-#	\_>>> Broadcast warning      \	        ||    ||     /		 				/
+#	\_>>> Wall Broadcast warning \	        ||    ||     /		 				/
 #		at: Android	      \ 	|_----_|    /					   /	    /	
 #		at: Ios		       \______[6]_\__/_ [8]/
 #		at: Other Pc
@@ -71,7 +61,6 @@
 
 
 *interface_Wan_vpn = 8.8.8.8
-
 
 #-------
 

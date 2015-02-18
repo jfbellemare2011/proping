@@ -1,5 +1,13 @@
 #==================EXEMPLE OF CONFIGURATION, Let's see in the configuration file ./proping.conf=============================
-#
+#			   ██▓███   ██▀███   ▒█████   ██▓███   ██▓ ███▄    █   ▄████ 
+#			  ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒▓██░  ██▒▓██▒ ██ ▀█   █  ██▒ ▀█▒
+#			  ▓██░ ██▓▒▓██ ░▄█ ▒▒██░  ██▒▓██░ ██▓▒▒██▒▓██  ▀█ ██▒▒██░▄▄▄░
+#			  ▒██▄█▓▒ ▒▒██▀▀█▄  ▒██   ██░▒██▄█▓▒ ▒░██░▓██▒  ▐▌██▒░▓█  ██▓
+#			  ▒██▒ ░  ░░██▓ ▒██▒░ ████▓▒░▒██▒ ░  ░░██░▒██░   ▓██░░▒▓███▀▒
+#			  ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒▓▒░ ░  ░░▓  ░ ▒░   ▒ ▒  ░▒   ▒ 
+#			  ░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ ░▒ ░      ▒ ░░ ░░   ░ ▒░  ░   ░ 
+#			  ░░         ░░   ░ ░ ░ ░ ▒  ░░        ▒ ░   ░   ░ ░ ░ ░   ░ 
+#			              ░         ░ ░            ░           ░       ░ 
 #	
 #	
 #	-Pass in SuperUser mode and copy the directory proping to a place that allows the execution of the script.
@@ -9,7 +17,7 @@
 #
 #	-If one of the configured interfaces is unreachable, a warning message will be issued on your terminal.
 #
-#	-To start the service (./proping |start|stop=(ctrl-c)| or close the window)
+#	-To start the service (./proping |start|stop|); deamon run in mackground
 #
 #	-Log files will be created in (./log/LOG_FILES.log)
 #
