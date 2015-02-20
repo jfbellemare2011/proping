@@ -1,5 +1,14 @@
-#==================EXEMPLE OF CONFIGURATION, Let's see in the configuration file /etc/proping/proping.conf=============================
-#	
+#==================EXEMPLE OF CONFIGURATION, Let's see in the configuration file /etc/proping/proping.conf===============
+#			   ██▓███   ██▀███   ▒█████   ██▓███   ██▓ ███▄    █   ▄████ 
+#			  ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒▓██░  ██▒▓██▒ ██ ▀█   █  ██▒ ▀█▒
+#			  ▓██░ ██▓▒▓██ ░▄█ ▒▒██░  ██▒▓██░ ██▓▒▒██▒▓██  ▀█ ██▒▒██░▄▄▄░
+#			  ▒██▄█▓▒ ▒▒██▀▀█▄  ▒██   ██░▒██▄█▓▒ ▒░██░▓██▒  ▐▌██▒░▓█  ██▓
+#			  ▒██▒ ░  ░░██▓ ▒██▒░ ████▓▒░▒██▒ ░  ░░██░▒██░   ▓██░░▒▓███▀▒
+#			  ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒▓▒░ ░  ░░▓  ░ ▒░   ▒ ▒  ░▒   ▒ 
+#			  ░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ ░▒ ░      ▒ ░░ ░░   ░ ▒░  ░   ░ 
+#			  ░░         ░░   ░ ░ ░ ░ ▒  ░░        ▒ ░   ░   ░ ░ ░ ░   ░ 
+#			              ░         ░ ░            ░           ░       ░ 
+#   	
 #	1-Let's you use the file (./configure.bash), before running the service, do not forget to make an executive with
 #	(chmod 755).
 #	
@@ -9,7 +18,7 @@
 #
 #	4-To start the service (/usr/sbin/proping |start|stop|)
 #	or
-#	-service proping (|stop|start|restart|)
+#	-service proping (|stop|start|)
 #
 #	5-Log files will be created in (/var/log/proping/LOG_FILES.log)
 #
