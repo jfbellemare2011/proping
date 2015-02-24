@@ -8,8 +8,7 @@
 #			  ░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ ░▒ ░      ▒ ░░ ░░   ░ ▒░  ░   ░ 
 #			  ░░         ░░   ░ ░ ░ ░ ▒  ░░        ▒ ░   ░   ░ ░ ░ ░   ░ 
 #			              ░         ░ ░            ░           ░       ░ 
-#	1-Let's you use the file (./configure.bash), before running the service, do not forget to make an executive with
-#	(chmod 755).
+#	1- Optional; if you want to compile the script, proping. Let's you use the file (./configure.bash), before running the service, do not forget to make an executive with (chmod 755).
 #
 #	-Pass in SuperUser mode and copy the directory proping to a place that allows the execution of the script.
 #	 For example within the memory of the device ex; /mnt/usb/proping-usb-linux*/

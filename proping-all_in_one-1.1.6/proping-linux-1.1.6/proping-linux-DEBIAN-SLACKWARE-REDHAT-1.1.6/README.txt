@@ -9,8 +9,7 @@
 #			  ░░         ░░   ░ ░ ░ ░ ▒  ░░        ▒ ░   ░   ░ ░ ░ ░   ░ 
 #			              ░         ░ ░            ░           ░       ░ 
 #   	
-#	1-Let's you use the file (./configure.bash), before running the service, do not forget to make an executive with
-#	(chmod 755).
+#	1- Optional; if you want to compile the script, proping. Let's you use the file (./configure.bash), before running the service, do not forget to make an executive with (chmod 755).
 #	
 #	2-Must use the file (./install) before running the service, do not forget to make an executive with (chmod 755).
 #
