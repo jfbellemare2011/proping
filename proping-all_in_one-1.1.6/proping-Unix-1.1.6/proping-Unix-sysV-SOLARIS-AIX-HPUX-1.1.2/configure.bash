@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+gcc ./src/install.c -o ./"install"
+gcc ./src/proping.c -o ./proping
 /usr/sfw/bin/gcc ./src/install.c -o ./"install"
 /usr/sfw/bin/gcc ./src/proping.c -o ./proping
 cp ./src/proping.conf ./proping.conf

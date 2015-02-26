@@ -1,3 +1,16 @@
+/***
+ *     ██▓███   ██▀███   ▒█████   ██▓███   ██▓ ███▄    █   ▄████ 
+ *    ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒▓██░  ██▒▓██▒ ██ ▀█   █  ██▒ ▀█▒
+ *    ▓██░ ██▓▒▓██ ░▄█ ▒▒██░  ██▒▓██░ ██▓▒▒██▒▓██  ▀█ ██▒▒██░▄▄▄░
+ *    ▒██▄█▓▒ ▒▒██▀▀█▄  ▒██   ██░▒██▄█▓▒ ▒░██░▓██▒  ▐▌██▒░▓█  ██▓
+ *    ▒██▒ ░  ░░██▓ ▒██▒░ ████▓▒░▒██▒ ░  ░░██░▒██░   ▓██░░▒▓███▀▒
+ *    ▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒▓▒░ ░  ░░▓  ░ ▒░   ▒ ▒  ░▒   ▒ 
+ *    ░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ ░▒ ░      ▒ ░░ ░░   ░ ▒░  ░   ░ 
+ *    ░░         ░░   ░ ░ ░ ░ ▒  ░░        ▒ ░   ░   ░ ░ ░ ░   ░ 
+ *                ░         ░ ░            ░           ░       ░ 
+ *                                                               
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,8 +65,8 @@ exit(0);
 }else if (strcmp(argv[1],arg_start)==0){
 puts (argv[1]);
 
-#define PROCFS "mount -t procfs proc /proc"
-system(PROCFS);
+//#define PROCFS "mount -t procfs proc /proc"
+//system(PROCFS);
 system(SHELLSTART);
 sleep(1);
 exit(0);
@@ -290,7 +303,7 @@ int pinger(void)
 {
 /*****concatenate command for system(ping)****/
 
-#define PING_COMMAND_STRCAT1 "ping -c 3 "
+#define PING_COMMAND_STRCAT1 "ping -c3 "
 #define PING_COMMAND_STRCAT2 " > /dev/null"
 //	#define PING_COMMAND_STRCAT2 " -c 3"
 //#define TRACE_COMMAND_STRCAT1 "traceroute -m 15 "
