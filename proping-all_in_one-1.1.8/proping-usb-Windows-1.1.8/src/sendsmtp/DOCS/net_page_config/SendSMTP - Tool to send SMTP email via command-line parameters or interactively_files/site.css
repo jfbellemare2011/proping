@@ -1,0 +1,455 @@
+/***********************************************/
+/* site.css  VirtualObjectives */
+
+/***********************************************/
+/* HTML tag styles */
+
+img {vertical-align:middle}
+
+@charset "utf-8";
+body {
+	font: 90%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #cccccc;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-image:url(images/background-soften-halo-small.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0; /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+h2 {
+	font-size: 130%;
+}
+
+h1, h2 {
+	color: #004080;
+	border-top: 2px solid #1A50B8;
+	font-size: 160%;
+}
+
+a:link {
+	color: #000000;
+	text-decoration: none; 
+	border-bottom: 1px dotted #000000;
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: none;
+	border-bottom: 1px dotted #000000;
+}
+a:hover, a:active, a:focus { /* this gives keyboard navigator the same hover experience as with a mouse. */
+	color: #FFFF00;
+	background-color: #0D6CAA;
+	text-decoration: none;
+}
+
+/* This container surrounds all other divs giving them their percentage-based width */
+.container {
+	width: 80%;
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+
+/* The header is not given a width. It will extend the full width of the layout. */
+.header {
+	background-color: #3e4a54;
+}
+.header table {
+	width: 99%;
+}
+
+.divider {
+	width: 100%;
+	overflow: hidden;
+	background-color: #3e4a54;
+}
+
+.sidebar1 {
+	float: left;
+	width: 20%;
+	background-color: #93A5C4;
+	padding-bottom: 10px;
+}
+.sidebar1 a:link, .sidebar1 a:visited {
+	border-bottom: 0px solid #666;
+}
+.sidebar1 p {
+	font-size: 80%;
+}
+
+.content {
+	color: #000000;
+	background-color: #eeeeee;
+	padding: 10px 0;
+	width: 80%;
+	float: left;
+}
+
+/* This grouped selector gives the lists in the .content area space */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. */
+}
+
+/* The navigation list styles */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that the links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	background-color: #8090AB;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #6F7D94;
+	color: #FFF;
+}
+
+/***********************************************/
+/* #pageName styles */
+
+#pageName {
+	font-size: 160%;
+	vertical-align:middle;
+	border-top: none;
+}
+
+/***********************************************/
+/* #Footer styles */
+
+.footer {
+	text-align:center;
+	padding: 10px 0;
+	color: #ffffff;
+	background-color: #3e4a54;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+.footer a:link {
+	color: #FFFFFF;
+	text-decoration: none; 
+	border-bottom: none;
+}
+
+.footer a:hover {
+   	color: #FFFFFF;
+   	background: #0D6CAA;
+	text-decoration: none; 
+}
+
+.footer a:visited {
+	color: #FFFFFF;
+	text-decoration: none; 
+	border-bottom: none;
+}
+
+.footer img {
+	float:right;
+	border: 0px;
+}
+
+/***********************************************/
+/* Miscellaneous float/clear classes */
+
+.fltrt {  /* this class can be used to float an element right in the page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in the page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/***********************************************/
+/* #globalNav styles */
+
+#globalNav{
+	padding: 0px 0px 5px 0px;
+	white-space: nowrap;
+	color:#cccccc;
+	background-color: #3e4a54;
+}
+ 'nowrap' prevents links from line-wrapping if there are too many to fit in one line
+//   this will force a horizontal scrollbar if there isn't enough room for all links
+//   remove rule or change value to 'normal' if you want the links to line-wrap 
+
+#globalNav a {
+	padding: 0px 4px 0px 0px;
+}
+
+/***********************************************/
+/* #menu styles */
+
+#menu {
+	background: #213E75 repeat-x;
+	border-top: 2px solid #23303D;
+	border-bottom: 2px solid #23303D;
+	padding: 0;
+	padding-left: 4px;
+	margin: 0;
+}
+
+#menu a {
+	color: #ffffff;
+	font-weight: normal;
+	margin: 0;
+	padding: 6px 16px;
+	text-decoration: none;
+	border-right: 2px solid #23303D;
+}
+
+#menu a:link {
+	color: #FFFFFF;
+	text-decoration: none; 
+	border-bottom: thin;
+}
+
+#menu a:hover {
+   	color: #FFFFFF;
+   	background: #0D6CAA;
+	text-decoration: none; 
+}
+
+#menu a:visited {
+	color: #FFFFFF;
+	text-decoration: none; 
+	border-bottom: thin;
+}
+
+#menu li, #menu2 li {
+	display: inline;
+	line-height: 1.95em;
+	list-style: none;
+	text-align: center;
+	margin-left: -4px;
+	padding: 0;
+}
+
+/***********************************************/
+/* Dropdown menu styles */
+
+.anylinkcss
+{
+	position:absolute;
+	visibility: hidden;
+	border:1px solid #ffffff;
+	border-bottom-width: 0;
+	line-height: 26px;
+	z-index: 100;
+	background-color: #213E75;
+}
+
+.anylinkcss a
+{
+	color: #ffffff;
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid #ffffff;
+	padding: 3px 0;
+	text-decoration: none;
+	text-indent: 5px;
+	text-align: left; 
+}
+
+.anylinkcss a:hover {  hover background color 
+	background-color: #0D6CAA;
+	color: #ffffff;
+}
+
+.anylinkcss a:visited {
+	color: #FFFFFF;
+	text-decoration: none; 
+	border-bottom: 1px solid #ffffff;
+}
+
+/***********************************************/
+/* Form style */
+
+.form-style td {
+	border-top: 1px solid #e9eae4;
+	vertical-align:top;
+}
+
+.form-style label { 
+	color:#213e75;
+	font-size: 120%;
+}
+
+/***********************************************/
+/* Button style */
+
+.cssbutton {
+    padding: 5px 10px;
+	display: inline-block;
+	background: #777 url(images/cssbutton.png) repeat-x bottom; 
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    text-shadow: 2px 2px #666;
+	background-color: #ff9c00;  Orange 
+	width: 90px;
+	text-align:center;
+	margin: 1px;
+   }
+.cssbutton:hover {
+	background-position: 0 center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #ff9c00;  Orange 
+}
+.cssbutton:active {
+	background-position: 0 top;
+	position: relative;
+	top: 1px;
+	padding: 6px 10px 4px;
+}
+a.cssbutton:link {
+	color: #fff;
+	text-decoration: none; 
+	border-bottom: none;
+}
+a.cssbutton:hover {
+	color: #fff;
+	text-decoration: none; 
+	border-bottom: none;
+}
+a.cssbutton:visited {
+	color: #fff;
+	text-decoration: none; 
+	border-bottom: none;
+}
+
+/***********************************************/
+/* New & Updated Tags */
+
+.new, .updated, .md5 {
+	border: 1px solid;
+	margin: 15px 0px;
+	padding:1px 2px 1px 2px;
+	width: 55px;	
+	font: bold 70% verdana;
+	text-align:center;
+	box-shadow: 0 0 5px #888;
+	text-shadow: 2px 2px 2px #ccc;
+}
+.updated {
+	color: #9F6000;
+	background-color:#feefb3;
+}
+.md5 {
+    color: #4F8A10;
+    background-color:#dff2bf;
+}
+.red {
+	color: #D8000C;
+	background-color:#ffbaba;
+}
+.green
+ {
+	color: #4F8A10;
+	background-color:#dff2bf;
+}
+.new  {
+	color: #00529B;
+	background-color:#bde5f8;
+}
+
+/***********************************************/
+/* Table Style */
+
+#ProgListTable th {
+	font-size:13px;
+	font-weight:normal;
+	background:#213E75;
+	border-top:4px solid #3E4A54;
+	border-bottom:1px solid #fff;
+	color:#FFFFFF;
+	padding:8px;
+}
+#ProgListTable td {
+	background:#CCCCCC;
+	border-bottom:1px solid #fff;
+	color:#000000;
+	border-top:1px solid transparent;
+	padding:5px;
+	vertical-align:top;
+}
+#ProgListTable tr:hover td {
+	background:#d0dafd;
+	color:#339;
+}
+
+/***********************************************/
+/* Search Table Style */
+
+#SearchTableHead td {
+	background-color: #213e75;
+	color:#FFFFFF;
+}
+#SearchTableHead a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+	border-bottom: 1px dotted #FFFFFF;
+}
+#SearchTableHead a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+	border-bottom: 1px dotted #FFFFFF;
+}
+#SearchTableHead a:hover {
+	color: #FFFFff;
+	background-color: #0D6CAA;
+	text-decoration: none;
+}
+
+#SearchTable td {
+	color:#000000;
+	background-color: #aaaaaa;
+	color:#000000;
+}
+#SearchTable a:hover {
+	color: #FFFFff;
+	background-color: #0D6CAA;
+	text-decoration: none;
+}
+#SearchTable dl {
+	color:#000000;
+}
+#SearchTable dt {
+	color:#333333;
+}
+#SearchMatchSummary {
+	color: #0033CC;
+}
