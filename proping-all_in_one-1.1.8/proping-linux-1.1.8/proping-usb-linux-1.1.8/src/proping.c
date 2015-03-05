@@ -176,6 +176,7 @@ int sendmail_bool_mode;
 int flag_ipdown_remember = 1;
 int sendingmail_freq_min = 5;
 int initial_sendingmail = 1;
+char *log_fpname_sendmail;
 
 char *option_name;
 char *option_argument;
@@ -857,7 +858,7 @@ if(flag_word == 0){
 
 } else if(flag_ipdown == 0){
 
-flag_ipdown_remember = 0; // Remember a down for sendingmail thread task
+
 
 
 //printf("String %d : %s\n",z+1,(*ptr_arr_downs)[z]);
@@ -929,29 +930,36 @@ struct tm * tm = localtime(&now);
 //fprintf(stderr, "%s", date);
 //-----------
 
-char file_date_log[64];
-char insidefile_date_log[64]; //external declaration
-strftime(file_date_log, sizeof file_date_log, "proping_%B_%Y.log", tm);
-strftime(insidefile_date_log, sizeof insidefile_date_log, "%A, %B %d, %Y %H:%M:%S", tm);
+char file_date_log2[64];
+char insidefile_date_log2[64]; //external declaration
+strftime(file_date_log2, sizeof file_date_log2, "proping_%B_%Y.log", tm);
+strftime(insidefile_date_log2, sizeof insidefile_date_log2, "%A, %B %d, %Y %H:%M:%S", tm);
 
 //---------------------Creating log_fp about date--------------------
 
 //---Create a dating log path file--------
-#define PATH_LOG_FILE "./log/"
-char file_log_path[256] = "";
+#define PATH_LOG_FILE2 "./log/"
+char file_log_path2[256] = "";
 
-strcat(file_log_path, PATH_LOG_FILE);
-strcat(file_log_path, file_date_log);
+strcat(file_log_path2, PATH_LOG_FILE2);
+strcat(file_log_path2, file_date_log2);
 
-//printf("%s",file_log_path);
+//printf("%s",file_log_path2);
 //---
 //---------
 FILE *log_fp;
 int log_exists;
-log_fpname = file_log_path;
+const char *log_fpname2;
 
+log_fpname2 = file_log_path2;
+                        /*------------extract log_fpname of subfunction-----------------*/
+                            log_fpname_sendmail="NULL";
 
+			    log_fpname_sendmail=malloc((strlen(log_fpname2)+1)*sizeof(char));
+			    strcpy(log_fpname_sendmail,log_fpname2);
+                        /*--------------------------------------------------------------*/
 //-------------
+
 char wall_command_strcat[256] = "";
 strcat(wall_command_strcat, "echo !!!Warning!!! communication between " ); //---Concatenate for wall command
 
@@ -974,12 +982,12 @@ strcat(echo_commandlog_strcat, insidefile_date_log);
 strcat(echo_commandlog_strcat, "-----");
 strcat(echo_commandlog_strcat, wall_command_strcat);
 strcat(echo_commandlog_strcat, " >> ");
-strcat(echo_commandlog_strcat, log_fpname);
+strcat(echo_commandlog_strcat, log_fpname2);
 //printf("\n\n%s\n\n",echo_commandlog_strcat );
 system(echo_commandlog_strcat);
 //------------
 
-
+flag_ipdown_remember = 0; // Remember a down for sendingmail thread task
 flag_ipdown = 1;
 sleep(3);
 

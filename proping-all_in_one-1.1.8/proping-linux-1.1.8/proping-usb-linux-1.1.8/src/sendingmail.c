@@ -38,6 +38,7 @@ char sendmail_subject[128];
 #define BUFF_SIZE 4096
 char sendmail_message[BUFF_SIZE];
 int initial_sendingmail;
+char *log_fpname_sendmail;
 
 int sendmail_bool_mode;
 int flag_ipdown_remember;
@@ -167,37 +168,12 @@ return;
 void reader(/*int argc, char *argv[]*/)
 {
 
-//--------------catching date and time------------------
-
-
-time_t now = time(NULL);
-struct tm * tm = localtime(&now);
-
-char file_date_log[64];
-char insidefile_date_log[64]; //external declaration
-strftime(file_date_log, sizeof file_date_log, "proping_%B_%Y.log", tm);
-strftime(insidefile_date_log, sizeof insidefile_date_log, "%A, %B %d, %Y %H:%M:%S", tm);
-
-//---------------------log_fp about date--------------------
-
-//---Create a dating log path file--------
-#define PATH_LOG_FILE "./log/"
-char file_log_path[256] = "";
-
-strcat(file_log_path, PATH_LOG_FILE);
-strcat(file_log_path, file_date_log);
-
-//printf("%s",file_log_path);
-//---
-//---------
-FILE *log_fp;
-int log_exists;
-const char * log_fpname = file_log_path;
-
- // printf ("\n --- log_fpname; %s ---\n", log_fpname);
+ // printf ("\n --- log_fpname_sendmail; %s ---\n", log_fpname_sendmail);
 		  FILE *file;
-		  file= openFile(log_fpname);
-		  walkFile(file, atol("16")); //16 for sixteen last line of the file
+		  file= openFile(log_fpname_sendmail); //The reference of log_fpname is in other file from proping.c,
+                                                       // it is to catch date time of the log file
+                  
+		  walkFile(file, atol("4")); //4 for 4 last line of the file, Warning, if lines are less, this is stacking!
 return;
 }
 //----------------------------------------------------------------------------------
@@ -259,9 +235,11 @@ int *sendingmail(/*int argc, char** argv*/)
 	if ((sendmail_bool_mode == 1) && (flag_ipdown_remember == 0) && ((flag_timer_sendingmail == 1)||(initial_sendingmail == 1) ) ){
 		initial_sendingmail = 0;
 
-	printf("\n -----------sendingmail_freq_min= %d !!!!!!!!!!!!!!!!!!!!\n", sendingmail_freq_min);
-	printf("\n -----------sendmail_bool_mode= %d !!!!!!!!!!!!!!!!!!!!\n", sendmail_bool_mode);
-	printf("\n -----------flag_ipdown_remember= %d !!!!!!!!!!!!!!!!!!!!\n", flag_ipdown_remember);
+	/*
+	 *	printf("\n -----------sendingmail_freq_min= %d !!!!!!!!!!!!!!!!!!!!\n", sendingmail_freq_min);
+	 * 	printf("\n -----------sendmail_bool_mode= %d !!!!!!!!!!!!!!!!!!!!\n", sendmail_bool_mode);
+	 *	printf("\n -----------flag_ipdown_remember= %d !!!!!!!!!!!!!!!!!!!!\n", flag_ipdown_remember);
+	 */
 
 	//printf("\n -----------sendingmail_time= %d !!!!!!!!!!!!!!!!!!!!\n", sendingmail_time);
 	    //sleep(sendingmail_time);//-timer in min to sending mail at different frequence in function of sec

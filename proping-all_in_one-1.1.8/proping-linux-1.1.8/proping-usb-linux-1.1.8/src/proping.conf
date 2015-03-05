@@ -18,7 +18,7 @@
 #
 #	-Must use the file (./proping) before running the service, do not forget to make an executive with (chmod 755).
 #
-#	-If one of the configured interfaces is unreachable, a warning message will be issued on your terminal and can be send by email.
+#	-If one of the configured interfaces is unreachable, a warning message will be issued on your terminal, telnet, ssh, and can be send by email.
 #
 #	-To start the service (./proping |start|stop|) ; Note; proping continue to run in background if terminal is closed.
 #
@@ -100,7 +100,7 @@ C)verbose_mode = on
 #Note; It is important to remove the spacers in the labels seen below !!!
 
 D)sendmail_mode = off
-E)sendmail_to = jf@localhost;user2@localhost;user3@localhost
+E)sendmail_to = jf@localhost,user2@localhost,user3@localhost
 F)sendmail_from = proping_machine1
 G)sendmail_subject = The_communication_network_tcp/ip_is_interrupted
 
