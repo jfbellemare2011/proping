@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/Template1.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="Description" content="VirtualObjectives provides IT consulting services for Microsoft SQL Server administration, Oracle administration, Tools and utilities for Windows environments and Lotus Notes/Domino databases/utilities for system administrators.">
+<meta name="Keywords" content="virtual,objectives,virtualobjectives,sql server,oracle,lotus,notes,domino,database,utility,utilities,program,application,free,freeware,windows,development,john buoro,notes.ini,notesini,killnotes,stopnotes,log analyser,log analyzer,analyser,analyzer,sendsmtp,notesrepair,repair notes,repair lotus notes,repair,compact,desktop,workspace,desktop8.ndk,error code,text formatting,text tools,csv,col2csv,col2tab,csv2tab,tab2csv,csv2html,html2csv,csv2xml,xml2csv,epolicy,policy,user registration,id store,partcopy,stopnotes,killnotes,notes password recovery,recover,password,mame,frontend,mamerunner,partcopy,clean drive,clean drive pro,dts,dts package,ssis,sql,script">
+<meta name="robots" content="index,follow">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>SendSMTP - Tool to send SMTP email via command-line parameters or interactively</title>
+<style type="text/css">
+<!--
+pre { 
+	background:url(images/pre_code_bg2.gif) repeat scroll left top #FFFFFF; 
+	border:1px solid #999; 
+	color:#000; 
+	display:block; 
+	font:100%/20px 'Courier New',Fixed,monospace; 
+	margin:1em 0; 
+	overflow:auto; 
+	padding:0 10px 0 20px;
+	text-align:left;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<script src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/ca-pub-3401916456733255.js" type="text/javascript" async=""></script><script type="text/javascript" src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/menu.js"></script>
+<link rel="icon" type="image/png" href="https://virtualobjectives.com.au/favicon.ico">
+<link href="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/site.css" rel="stylesheet" type="text/css"><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */
+</style>
+<![endif]-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+<div class="container">
+  <header><div class="header">
+	<table>
+	<tbody><tr>
+	<td>
+	<img src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/logo.png" alt="VirtualObjectives">
+	</td>
+	<td style="text-align:right">
+	<form action="http://www.virtualobjectives.com.au/cgi-bin/ksearch/ksearch.cgi" method="GET" name="search">
+	<input name="terms" maxlength="50" type="text">
+	<input src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/search.png" alt="Search" style="vertical-align:middle" type="image">
+	<input name="showm" value="0" type="hidden">
+	</form></td>
+	</tr>
+	</tbody></table>
+  <!-- end .header --></div></header>
+
+  <div id="globalNav">
+  <nav>
+  	<!-- DROPDOWN MENUS START -->
+	<ul id="menu">
+     	<li><a href="https://virtualobjectives.com.au/index.htm" onclick="return clickreturnvalue()">Home</a></li>
+        <li><a href="https://virtualobjectives.com.au/products.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, 'menuproducts')">Products</a></li>
+        <li><a href="https://virtualobjectives.com.au/services.htm" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, 'menuservices')">Services</a></li>
+        <li><a href="https://virtualobjectives.com.au/contactus.htm">Contact Us</a></li>
+	</ul>
+	<!-- DROPDOWN MENUS END -->
+  </nav>
+
+<!-- google_ad_section_start -->
+<div style="text-align:center; margin: 0; padding: 10px 0px 0px 0px;">
+<script async="" src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/adsbygoogle.js"></script>
+<!-- PageHeader -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3401916456733255" data-ad-slot="4074941919"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- google_ad_section_end -->
+
+</div>
+
+<div class="divider">
+
+  <div class="sidebar1">
+  <nav><ul class="nav">
+      <li><a href="https://virtualobjectives.com.au/utilitiesprogs/utilsprogs-index.htm">Utilities &amp; Programs</a></li>
+      <li><a href="https://virtualobjectives.com.au/sqlserver/sqlserver-index.htm">Microsoft SQL Server</a></li>
+      <li><a href="https://virtualobjectives.com.au/oracle/oracle-index.htm">Oracle</a></li>
+      <li><a href="https://virtualobjectives.com.au/notesdomino/notesdomino-index.htm">Lotus Notes/Domino</a></li>
+      <li><a href="https://virtualobjectives.com.au/mamerunner/mamerunner-index.htm">MAMERunner</a></li>
+    </ul>
+  </nav>
+    <!-- InstanceBeginEditable name="EditRegionSidebar" -->
+	<!-- InstanceEndEditable -->
+    
+<!-- google_ad_section_start -->
+<script async="" src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/adsbygoogle.js"></script>
+<!-- SideBar -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-3401916456733255" data-ad-slot="9973405022" data-ad-format="auto"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:161px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:161px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="600" width="161"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- google_ad_section_end -->
+
+    <!-- end .sidebar1 --></div>
+
+	<!-- InstanceBeginEditable name="EditRegion1" -->
+<div class="content">
+  <h1 id="pageName"> <img src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/sendsmtp.png" hspace="5" vspace="5">SendSMTP</h1>
+    <p>SendSMTP can send SMTP email via command-line instructions or 
+interactively. This useful utility can be used to send email alerts, 
+programmatically send files, whatever you like.</p>
+    <p>Features:</p>
+    <ul>
+      <li>SendSMTP utilises Transport Layer Security (TLS) version 1.2 and SSL v2/v3. </li>
+      <li>Support for SASL authentication (Simple Authentication and 
+Security Layer) using the following methods; Anonymous, PLAIN, S/KEY, 
+CRAM-MD5, CRAM-SHA1, and OTP (One-Time-Password).</li>
+      <li>Password is  encrypted using 128-bit Rijndael (AES).</li>
+      <li>Supports Windows 7,   Windows Server 2008/2003, Windows Vista, Windows XP, Windows Server 2000 <br>
+      </li>
+    </ul>
+    <table style="font-size:16px">
+	<tbody><tr>
+	<td><a class="cssbutton" href="https://virtualobjectives.com.au/utilitiesprogs/SendSMTP_v2.16.1.1.zip">Download</a></td>
+	<td>SendSMTP v2.16.1.1 (Size 1,926 KiB) <a href="https://virtualobjectives.com.au/licence-freeware.htm">Freeware</a><br> 
+	<span class="md5">
+	MD5 Hash = 0a0aea9fafb2309344a6bdd934f71fec</span></td>
+	</tr>
+	<tr>
+    <td><a class="cssbutton" href="https://virtualobjectives.com.au/utilitiesprogs/SendSMTP_v2.5.1.0.zip">Download</a></td>
+	<td>SendSMTP v2.5.1.0 (Size 349 KiB) <a href="https://virtualobjectives.com.au/licence-freeware.htm">Freeware</a><br> 
+	<span class="md5">MD5 Hash = fbdaebaeb7b8b4ddefec0b6a752875cf</span><br>
+	(<em>Older version without SASL authentication)</em></td>
+	</tr>
+	<tr>
+    <td><a class="cssbutton" href="https://virtualobjectives.com.au/donate.php">Donate</a></td>
+	<td></td>
+    </tr>
+	</tbody></table>
+	
+    <p align="center"><img src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/sendsmtpscn1.png" alt="SendSMTP - Tool to send SMTP email via command-line parameters or interactively." height="545" width="542"></p>
+    <p align="center"><img src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/sendsmtpscn2.png" alt="SendSMTP Settings" height="545" width="542"></p>
+
+    <h2>Installation:</h2>
+     <p>Extract the files SendSMTP.exe, libeay32.dll and libssl32.dll into the same directory anywhere on your PC or server.</p>
+     <h2>Command-line Usage:</h2>
+     <p>You can run SendSMTP interactively or you can use a combination of command-line switches.<br>
+       Command-line options are:</p>
+	   
+     <pre>SendSMTP [/? | /H] [/V] [/I] [/D] [/S filename] [/NOS] [/LOG] [/LOGSMTP]
+         [/HOST &lt;hostname&gt;] [/PORT &lt;portnumber&gt;]
+         [/AUTH &lt;authentication method&gt;]
+         [[/USERID &lt;userid&gt;]
+         [/PASS &lt;password&gt;] | /PASSX &lt;encrypted password&gt;]]
+         [[/MailAgent &lt;name&gt;]
+         [[/HeloName &lt;name&gt;]
+         [/FROM &lt;address&gt;] [/TO &lt;address&gt;] [/SUBJECT "&lt;string&gt;"]
+         [/REPLYTO &lt;address&gt;] [/CC &lt;address&gt;] [/BCC &lt;address&gt;]
+         [/BODY "&lt;string&gt;"]
+         [/BODYFILE "&lt;filename&gt;"]
+         [/FILES &lt;filename, "file name", filename, file|20name, ...&gt;]</pre>
+
+     <table id="ProgListTable" width="99%">
+	<tbody><tr>
+           <th>Switch</th>
+           <th>Function</th>
+      </tr>
+  <tr>
+    <td><strong>/? or /H</strong></td>
+    <td>The help you are seeing now.</td>
+  </tr>
+  <tr>
+    <td><strong>/V</strong></td>
+    <td>Displays the version in an About dialog box.</td>
+  </tr>
+  <tr>
+    <td><strong>/I</strong></td>
+    <td>[Optional] Runs SendSMTP interactively. By default no messages will appear on the
+  screen. (Default)</td>
+  </tr>
+  <tr>
+    <td><strong>/D</strong></td>
+    <td>[Optional] Execute with debugging on.<br>
+	Implies that SendSMTP is run interactively.</td>
+  </tr>
+  <tr>
+    <td><strong>/S &lt;filename&gt;</strong></td>
+    <td>[Optional] Send mail using a specified settings file. If the switch is not
+  used then the default SendSMTP.ini settings file is used if present. This option will supersede all other switches except <strong>/NOS</strong>. You can use a
+  combination of settings file with added command-line switches where command-line switches always takes precedence.<br>
+  Environment Variables are supported. </td>
+  </tr>
+  <tr>
+    <td><strong>/NOS</strong></td>
+    <td>[Optional] No settings. Do not use any settings file including the default settings
+  file SendSMTP.ini. Supersedes the <strong>/S</strong> switch.</td>
+  </tr>
+  <tr>
+    <td><strong>/LOG</strong></td>
+    <td>Enable the saving of activity to the log file SendSMTP.log <br>
+      The log file is   written to the same path where SendSMTP.exe is located.<br>
+      Length of log file is   limited to 5,000 lines and is automatically truncated. </td>
+  </tr>
+  <tr>
+    <td><strong>/LOGSMTP</strong></td>
+    <td>Enable the saving of SMTP conversation to the log file SendSMTP_SMTP.log <br>
+      The log file is written to the same path where SendSMTP.exe is   located.<br>
+      The log file is appended to and not automatically maintained.</td>
+  </tr>
+  <tr>
+    <td><strong>/HOST &lt;hostname&gt;</strong></td>
+    <td>Name or IP address of the SMTP host.</td>
+  </tr>
+  <tr>
+    <td><strong>/PORT &lt;portnumber&gt;</strong></td>
+    <td>[Optional] Port number the SMTP host uses for SMTP
+  communication. (Default is port 25)</td>
+  </tr>
+  <tr>
+    <td><strong>/AUTH &lt;authentication method &gt;</strong></td>
+    <td>[Optional] The authentication method to use when connecting to an SMTP server:<br>
+0 = No Authentication.<br>
+1 = Username and Password Authentication<br>
+2 = SASL Authentication (includes SSL)</td>
+  </tr>
+  <tr>
+    <td><strong>/USERID &lt;userid&gt;</strong></td>
+    <td>[Optional] The user account used to authenticate with the SMTP
+  host.</td>
+  </tr>
+  <tr>
+    <td><strong>/PASS &lt;password&gt;</strong></td>
+    <td>[Optional] The password for the user account above.<br>
+    /PASS takes precedence over /PASSX </td>
+  </tr>
+  <tr>
+    <td><strong>/PASSX &lt;encrypted password&gt;</strong></td>
+    <td>[Optional] The encrypted password for the user account above.<br>
+      The encrypted password can be obtained from the Password_AES entry
+ in the SendSMTP.ini file if used in the current settings.<br>
+    /PASS takes precedence over /PASSX </td>
+  </tr>
+  <tr>
+    <td><strong>/MailAgent &lt;name&gt;</strong></td>
+    <td>[Optional] Connect to the SMTP server using a specified mail agent name.<br>
+      The default is SendSMTP vvvvvv (Where vvvvvv is the version)</td>
+  </tr>
+  <tr>
+    <td><strong>/HeloName &lt;name&gt;</strong></td>
+    <td>[Optional] Connect to the SMTP server using a specified HELO / EHLO name.<br>
+      The default is SendSMTP vvvvvv (Where vvvvvv is the version)</td>
+  </tr>
+  <tr>
+    <td><strong>/FROM &lt;address&gt;</strong></td>
+    <td>Email address of who it is sent from. This is also used to
+  populate the From Name.</td>
+  </tr>
+  <tr>
+    <td><strong>/TO &lt;address&gt;<br>
+    /TO "&lt;address1&gt;, &lt;address2&gt;,..."</strong></td>
+    <td>Email address to send to. For  multiple email addresses separate
+ with commas and enclose with quotes. e.g. /TO "name1@abc.com, 
+name2@xyz.com"</td>
+  </tr>
+  <tr>
+    <td><strong>/REPLYTO &lt;address&gt;</strong></td>
+    <td>Email address to send replies back to.</td>
+  </tr>
+  <tr>
+    <td><strong>/CC &lt;address&gt;<br>
+      /CC "&lt;address1&gt;, &lt;address2&gt;,..."</strong></td>
+    <td>Email address to send a carbon copy (cc) to. For multiple email 
+addresses separate with commas and enclose with quotes. e.g. /CC 
+"name1@abc.com, name2@xyz.com"</td>
+  </tr>
+  <tr>
+    <td><strong>/BCC &lt;address&gt;<br>
+      /BCC "&lt;address1&gt;, &lt;address2&gt;,..."</strong></td>
+    <td>Email address to send a blind carbon copy (bcc) to. For  
+multiple email addresses separate with commas and enclose with quotes. 
+e.g. /BCC "name1@abc.com, name2@xyz.com"</td>
+  </tr>
+  <tr>
+    <td><strong>/SUBJECT "&lt;string&gt;"</strong></td>
+    <td>[Optional] Subject title of your email enclosed in quotes.</td>
+  </tr>
+  <tr>
+    <td><strong>/BODY "&lt;string&gt;"</strong></td>
+    <td><p>[Optional] Body text enclosed in quotes.</p></td>
+  </tr>
+  <tr>
+    <td><strong>/BODYFILE "&lt;filename&gt;"</strong></td>
+    <td>[Optional] File containing the body text.<br>
+      If path or file name contains spaces then it must  be enclosed in quotes.<br>
+    /BODYFILE supersedes and overwrites text supplied by /BODY switch and saved settings.<br>
+    Environment Variables are supported.</td>
+  </tr>
+  <tr>
+    <td><strong>/FILES &lt;filename, "file name", filename, file|20name, ...&gt;</strong></td>
+    <td>[Optional] File(s) to be attached to the email.<br>
+  If path or file name contains spaces then it must be enclosed in quotes.<br>
+  Use can use hexadecimal "escape" characters to substitute characters. 
+Just use a pipe character | followed by two digit hex code for the 
+character.<br>
+  Example  "sample|2c with|20comma.txt" for "sample, with comma.txt" <br>
+  Environment Variables are supported.</td>
+  </tr>
+</tbody></table>
+
+    <p><strong>NOTES:</strong><br>
+      The switches can be slashes "/" or minus signs "-"<br>
+Switches are case insensitive.<br>
+Filenames can also include paths. If there are spaces in the filename or path  then enclose it with "double quotes".</p>
+
+     <h2>Examples:</h2>
+	 
+     <p>1) The run the program interactively in debug mode...</p>
+     <pre>SendSMTP /D</pre>
+	 
+     <p>2) The run the program using a customised settings file...</p>
+     <pre>SendSMTP /s c:\temp\mysettings.ini</pre>
+	 
+     <p>3) Same as above but interactively...</p>
+     <pre>SendSMTP /s c:\temp\mysettings.ini /i</pre>
+	 
+     <p>4) Alert an administrator when a backup batch process has failed...</p>
+     <pre>SendSMTP /nos /host mailserver /from NTServer04@abc.com /to ntadmins@abc.com /subject "Error in backup process" /files d:\ntbackup\error.log</pre>
+	 
+     <p>5) The run the program using a customised settings file AND you 
+wish to call the program in a batch process where the To field is 
+programmatically supplied as the first parameter...</p>
+     <pre>SendSMTP /s othersettings.ini /to %1</pre>
+	 
+     <h2>Return Codes:</h2>
+     <p>0 = Success.<br>
+       1 = Failure.<br>
+       2 = Settings file not found.</p>
+	   
+     <h2>Limitations:</h2>
+    <p>1) There is no facility for address lookups.<br>
+2) The body is limited to plain text only. <br>
+3) Diagnostics and error messages are limited. If you are experiencing 
+errors then please consult the log of the host SMTP server. Include the 
+switches <strong>/I</strong> and <strong>/D</strong> to see more information.<br>
+4) SendSMTP utilises Transport Layer Security (TLS) version 1.2 and SSL v2/v3.<br>
+5) SASL authentication (Simple Authentication and Security Layer) is  
+limited to the following methods; Anonymous, PLAIN, S/KEY, CRAM-MD5,  
+CRAM-SHA1, and OTP (One-Time-Password). You must have the files 
+libeay32.dll and libssl32.dll in the same directory as SendSMTP.exe for 
+SASL authentication to work.<br>
+6) As the name suggests, SendSMTP only sends email, it does not receive email.</p>
+
+     <h2>Other Information:</h2>
+    <p>1) The SendSMTP program does not require the settings file 
+SendSMTP.ini. This file is created when the "Save Settings as Default" 
+button is clicked on.<br>
+2) The "Save Settings as Default" button will write the settings to the 
+file SendSMTP.ini in the same path as the SendSMTP.exe file. Any text in
+ the Body field will be saved to the SendSMTPBody.rtf file in the same 
+path.<br>
+3) You can create multiple INI files and accompanying Body files if you wish. Use the switch <strong>/S</strong> to specify the INI file (and hence the Body) you want to use.<br>
+4) You can double click on the version number in the About dialog box to activate and disable debugging.<br>
+5) When using the /PASSX switch, the encrypted password can be copied 
+from the Password_AES entry in the SendSMTP.ini file if the password is 
+used in the current  settings.<br>
+6) Password is encrypted using 128-bit Rijndael (AES). <br>
+    7) Updated versions of libeay32.dll and libssl32.dll can be obtained from <a href="http://www.openssl.org/related/binaries.html">http://www.openssl.org/related/binaries.html</a>
+ Please download the and install "Win32 OpenSSL" and copy the files 
+libeay32.dll and libssl32.dll from the Windows System folder 
+(%WINDIR%\system32) and overwrite the files where SendSMTP.exe resides.</p>
+    <h2>Troubleshooting:</h2>
+    <p>If you have touble sending email then: </p>
+    <ul>
+      <li>Check SMTP server's log to see if there is more information.</li>
+      <li>Use the /LOGSMTP switch with SendSMTP to log the SMTP conversation.</li>
+      <li>In the SendSMTP Settings, the Mail Agent Name and Helo Name 
+properties are blank by default which issues "SendSMTP". These names may
+ not acceptable by the SMTP server.
+        <ul>
+          <li> You can change the Mail Agent Name to something like "Outlook" or "Mozilla"</li>
+          <li>You can change the Helo Name to your host FQDN. </li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Change History:</h2>
+	<a href="javascript:;" onmousedown="toggleDiv('mydiv');" style="font-size:9px;">Expand/Collapse</a>
+	<div id="mydiv" style="display:none">
+
+	<p>v2.16.1.1 - 03/10/2014<br>
+      - Changed CharSet from iso-8859 to utf-8.
+	</p>
+    
+	<p>v2.15.2.6 - 24/09/2014<br>
+	  - Updated VCL styles.<br>
+      - Updated libeay32.dll and libssl32.dll.<br>
+      - Added Donate.
+	</p>
+
+	<p>v2.15.1.4 - 16/04/2014<br>
+	  - Updated libeay32.dll and libssl32.dll files to v1.0.1g to resolve Heartbleed insecurity.<br>
+      - Updated UI.
+	</p>
+    	
+	<p>v2.14.3.10 - 06/11/2013<br>
+	  - More verbose log messages and exceptions.<br>
+	  - Add /LOGSMTP switch to log SMTP conversation.<br>
+      - Updated with Indy10_5066.
+	</p>
+	
+	<p>v2.13.1.5 - 10/04/2013<br>
+	  - Fixed MailAgent and HeloName.<br>
+      - Updated with Indy10_4976.<br>
+      - Added /MailAgent and /HeloName command-line switches.<br>
+      - Updated libeay32.dll and libssl32.dll files.<br>
+      - Corrected precedence between /S switch and other command-line switches.<br>
+      - Fixed memory leak.
+	</p>
+	
+	<p>v2.12.7.12 - 12/12/2012<br>
+      - Fixed /S switch.
+    </p>
+	
+	<p>v2.11.6.11 - 26/07/2012<br>
+      - Added ability to change the Mail Agent name (X-Mailer) and Helo greeting in the Settings.
+    </p>
+	
+	<p>v2.10.5.9 - 02/05/2012<br>
+      - Updated libeay32.dll and libssl32.dll.<br>
+	  - Fixed one of the Indy memory leaks.<br>
+	  - Updated /FILES parameter to use hexadecimal "escape" characters to 
+substitute characters using a pipe character | followed by two digit hex
+ code for the character. Example |2c
+    </p>
+	
+	<p>v2.9.4.5 - 15/09/2011<br>
+      - Added updated libeay32.dll and libssl32.dll files which provides support for TLS v1.2 and SSL v2/v3.
+    </p>
+	<p>v2.8.3.2 - 29/05/2010<br>
+      - Added support for environment variables.
+    </p>
+    <p>v2.7.1.0 - 03/04/2010<br>
+      - Added libeay32.dll to the archive due to inconsistencies with different versions.
+    </p>
+    <p>v2.7.1.0 - 03/01/2010<br>
+      - Fixed /FILES switch which did not work when placed as the last parameter.<br>
+	  - Corrected issue where Body was populated from both Settings files and command-line.
+    </p>
+    <p>v2.6.0.0 - 28/07/2009<br>
+	  - Added /PASSX switch to support encrypted passwords.<br>
+	  - Added support for Transport Layer Security (TLS) version 1. SASL 
+authentication (Simple Authentication and Security Layer) is limited to 
+the following methods; Anonymous, PLAIN, S/KEY, CRAM-MD5, CRAM-SHA1, and
+ OTP (One-Time-Password).<br>
+	  - Updated password encryption to use 128-bit Rijndael.<br>
+	  - Updated GetVersion.<br>
+	  - Added /AUTH switch.<br>
+	  - Improved /FILES switch.
+    </p>
+    <p>v2.5.1.0 - 10/03/2008<br>
+      - Added /BODYFILE switch.<br>
+	  - Fixed memory leak.
+    </p>
+    <p>v2.5.0.0 - 09/02/2008<br>
+      - Changed URL links to use default browser.<br>
+	  - Added XP style buttons.
+    </p>
+    <p>v2.4.1.0 - 18/10/2006<br>
+	  - Changes the URL.<br>
+	  - Add HTML help in place of RTF.<br>
+	  - Add replyto, cc, bcc switches.<br>
+	  - Fixed log scrolling. Added more glyphs.<br>
+	  - Corrected error logging.<br>
+	  - Success message will now only display when successful.<br>
+	  - Option to output to /LOG file.
+	</p>
+    <p>v2.3.0.3 - 03/08/2006<br>
+      - Fixed problem where it tries to authenticate all the time (AuthenticationType).<br>
+      - Hide password.
+	</p>
+    <p>v2.2 - 26/01/2006<br>
+      - Added AlphaBlend. Forced dialog boxes to appear in foreground.
+	</p>
+    <p>v2.1 - 26/10/2004<br>
+      - Date/time stamp log.<br>
+	  - Added hour glass cursor.<br>
+	  - Timeout defaults to 30sec.
+	</p>
+    <p>v2.0 - 04/06/2004<br>
+      - Changed to use Indy IdSMTP rather than NMSMTP.<br>
+	  - Add log window.<br>
+	  - Improved button glyphs.<br>
+	  - Added /PASS to command-line parameters.
+	</p>
+    <p>v1.1 - 11/02/2003<br>
+      - Fixed conflicts between INI using command-line settings.
+	</p>
+    <p>12/06/2002<br>
+      - Various updates; ExitProgram, attachment counting, /USERID switch.
+	</p>
+    <p>03/05/2002<br>
+      - Program created.
+	</p>
+	</div>
+	 
+</div>
+
+<!-- InstanceEndEditable -->    
+
+</div>
+
+<footer><div class="footer">
+  
+<!-- google_ad_section_start -->
+<div style="text-align:center; margin: 0; padding: 0px 0px 0px 0px;">
+<script async="" src="SendSMTP%20-%20Tool%20to%20send%20SMTP%20email%20via%20command-line%20parameters%20or%20interactively_files/adsbygoogle.js"></script>
+<!-- PageFooter -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3401916456733255" data-ad-slot="4402484123"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- google_ad_section_end -->
+  
+  <a href="https://virtualobjectives.com.au/products.htm">Products</a> | 
+  <a href="https://virtualobjectives.com.au/services.htm">Services</a> | 
+  <a href="https://virtualobjectives.com.au/contactus.htm">Contact Us</a> | 
+  <a href="https://virtualobjectives.com.au/privacy.htm">Privacy Policy</a> | 
+  <a href="https://virtualobjectives.com.au/donate.php">Donate</a> | 
+  © 2015 VirtualObjectives
+    <!-- end .footer --></div></footer>
+  <!-- end .container --></div>
+  
+	<!-- DROPDOWN SUBMENUS START -->
+    <div id="menuproducts" class="anylinkcss" style="width: 200px; visibility: hidden; left: 181px; top: 110px;">
+    	<a href="https://virtualobjectives.com.au/products.htm" style="color: rgb(255, 255, 255);">Products</a>
+    	<a href="https://virtualobjectives.com.au/utilitiesprogs/utilsprogs-index.htm" style="color: rgb(255, 255, 255);">Utilities &amp; Programs</a>
+        <a href="https://virtualobjectives.com.au/sqlserver/sqlserver-index.htm" style="color: rgb(255, 255, 255);">Microsoft SQL Server</a>
+        <a href="https://virtualobjectives.com.au/oracle/oracle-index.htm" style="color: rgb(255, 255, 255);">Oracle</a>
+        <a href="https://virtualobjectives.com.au/notesdomino/notesdomino-index.htm" style="color: rgb(255, 255, 255);">Lotus Notes/Domino</a>
+        <a href="https://virtualobjectives.com.au/mamerunner/mamerunner-index.htm" style="color: rgb(255, 255, 255);">MAMERunner</a>
+    </div>
+    <div id="menuservices" class="anylinkcss" style="width: 200px; visibility: hidden; left: 270px; top: 110px;">
+        <a href="https://virtualobjectives.com.au/services.htm" style="color: rgb(255, 255, 255);">Services</a>
+        <a href="https://virtualobjectives.com.au/services_utilitiesprogs.htm" style="color: rgb(255, 255, 255);">Utilities &amp; Programs</a>
+        <a href="https://virtualobjectives.com.au/services_sqlserver.htm" style="color: rgb(255, 255, 255);">Microsoft SQL Server</a>
+    </div>
+	<!-- DROPDOWN SUBMENUS END -->  
+
+
+
+</body><!-- InstanceEnd --></html>
