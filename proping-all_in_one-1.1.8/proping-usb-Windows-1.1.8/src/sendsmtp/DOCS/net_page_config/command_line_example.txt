@@ -1,6 +1,0 @@
-SendSMTP.exe /nos
-/host localhost
-/from admin@localhost
-/to user@localhost
-/subject "Network_Down"
-/body "Body of message"
